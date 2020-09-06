@@ -387,7 +387,7 @@ static size_t parseHeaderLine(flightLog_t *log, mmapStream_t *stream, ParserStat
         }
     } else if (strcmp(fieldName, "Data version") == 0) {
         log->private->dataVersion = atoi(fieldValue);
-    } else if (strcmp(fieldName, "Firmware type") == 0) {
+    } else if (strcmp(fieldName, "Firmware type") == 0) {     # TÄMÄ!
         if (strcmp(fieldValue, "Cleanflight") == 0)
             log->sysConfig.firmwareType = FIRMWARE_TYPE_CLEANFLIGHT;
         else
